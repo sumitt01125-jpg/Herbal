@@ -166,6 +166,26 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:600;line-height:1.15;col
 .hc-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-size:.88rem;font-weight:600;color:var(--gold2);transition:var(--t)}
 .hc-link:hover{gap:13px}
 @media(max-width:560px){.hc-ghost{transform:translate(8px,10px) rotate(2deg)}.hc-price{font-size:1.8rem}.hc-row{padding:16px 0}}
+
+/* ========== CLIENT BRANDS HORIZONTAL GALLERY ========== */
+.brands-section{padding:76px 0;background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden}
+.brands-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:30px}
+.brands-heading .section-title{margin-bottom:8px}
+.brands-heading .section-subtitle{margin-bottom:0}
+.brands-controls{display:flex;gap:10px;flex-shrink:0}
+.brands-arrow{width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--border);border-radius:50%;background:#fff;color:var(--primary);font-size:1.35rem;transition:var(--t);box-shadow:var(--sh1)}
+.brands-arrow:hover{background:var(--primary);border-color:var(--primary);color:#fff}
+.brands-track{display:flex;gap:18px;overflow-x:auto;overflow-y:hidden;padding:8px 2px 18px;scroll-snap-type:x mandatory;scroll-behavior:smooth;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:var(--primary) var(--primary-light);-webkit-overflow-scrolling:touch}
+.brands-track::-webkit-scrollbar{height:7px}
+.brands-track::-webkit-scrollbar-track{background:var(--primary-light);border-radius:999px}
+.brands-track::-webkit-scrollbar-thumb{background:var(--primary);border-radius:999px}
+.brand-tile{flex:0 0 500px;height:500px;display:flex;align-items:center;justify-content:center;padding:18px;background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:var(--sh1);scroll-snap-align:start;transition:var(--t)}
+.brand-tile:hover{transform:translateY(-4px);box-shadow:var(--sh2);border-color:#c9a227}
+.brand-tile img{width:100%;height:100%;object-fit:contain}
+.brands-hint{font-size:.8rem;color:var(--text-muted);margin-top:10px}
+@media(max-width:768px){.brands-section{padding:58px 0}.brands-heading{align-items:flex-start}.brand-tile{flex-basis:142px;height:116px}.brands-controls{display:none}}
+@media(max-width:560px){.brands-heading{display:block}.brands-heading .section-subtitle{margin-bottom:0}.brand-tile{flex-basis:128px;height:104px}}
+
     </style>
 </head>
 <body>
@@ -208,8 +228,8 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:600;line-height:1.15;col
             <div class="hc-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>COS-8 Licensed</div>
             <div class="hc-head"><h5>Indicative Pricing</h5><span class="hc-tag">Per piece</span></div>
             <div class="hc-row"><div class="hc-name"><strong>Gentle Oil-Control Cleanser</strong><span class="hc-size">100 ml</span></div><div class="hc-price"><sup>₹</sup>47</div></div>
-            <div class="hc-row"><div class="hc-name"><strong>Blemish Serum</strong><span class="hc-size">30 ml</span></div><div class="hc-price"><sup>₹</sup>84</div></div>
-            <div class="hc-row" style="border-bottom:none"><div class="hc-name"><strong>Lightweight Moisturizer</strong><span class="hc-size">100 gm</span></div><div class="hc-price"><sup>₹</sup>44</div></div>
+            <div class="hc-row"><div class="hc-name"><strong>Rice Water Toner </strong><span class="hc-size">100 ml</span></div><div class="hc-price"><sup>₹</sup>43</div></div>
+            <div class="hc-row" style="border-bottom:none"><div class="hc-name"><strong>Aloevera Gel</strong><span class="hc-size">100 gm</span></div><div class="hc-price"><sup>₹</sup>29</div></div>
             <p class="hc-foot"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg><span>Includes packaging, labeling, designing &amp; PVC shrink. Excludes GST, transport &amp; outer box.</span></p>
             <a href="#full-price-list" class="hc-link">See full price list <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
         </div></div>
@@ -417,14 +437,14 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:600;line-height:1.15;col
                         <td class="price-cell">₹47</td>
                     </tr>
                     <tr>
-                        <td>Blemish Serum</td>
-                        <td>30ml</td>
-                        <td class="price-cell">₹84</td>
+                        <td>Rice Water Toner</td>
+                        <td>100ml</td>
+                        <td class="price-cell">₹43</td>
                     </tr>
                     <tr>
-                        <td>Lightweight Moisturizer</td>
+                        <td>Aloevera Gel</td>
                         <td>100gm</td>
-                        <td class="price-cell">₹44</td>
+                        <td class="price-cell">₹29</td>
                     </tr>
                 </tbody>
             </table>
@@ -1041,6 +1061,59 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:600;line-height:1.15;col
     </div>
 </section>
 
+
+<!-- ========== BRANDS WE HAVE WORKED FOR ========== -->
+<section class="brands-section" id="client-brands" aria-labelledby="client-brands-title">
+    <div class="container">
+        <div class="brands-heading">
+            <div>
+                <div class="section-label">Our Partners</div>
+                <h2 class="section-title" id="client-brands-title">Brands We Have Worked For</h2>
+                <p class="section-subtitle">Proud to support brands with their skincare, haircare, and cosmetic manufacturing needs.</p>
+            </div>
+            <div class="brands-controls" aria-label="Brand gallery controls">
+                <button class="brands-arrow" type="button" aria-label="Scroll brands left" onclick="scrollBrands(-1)">&#8592;</button>
+                <button class="brands-arrow" type="button" aria-label="Scroll brands right" onclick="scrollBrands(1)">&#8594;</button>
+            </div>
+        </div>
+        <div class="brands-track" id="brandsTrack" tabindex="0" aria-label="Horizontally scrollable client brand photos">
+            <div class="brand-tile"><img src="./assets/brand-.jpg" alt="Maur Herbals client brand 1" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 1 at images/brands/brand-01.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (2).jpg" alt="Maur Herbals client brand 1" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 1 at images/brands/brand-01.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (3).jpg" alt="Maur Herbals client brand 2" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 2 at images/brands/brand-02.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (4).jpg" alt="Maur Herbals client brand 3" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 3 at images/brands/brand-03.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (5).jpg" alt="Maur Herbals client brand 4" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 4 at images/brands/brand-04.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (6).jpg" alt="Maur Herbals client brand 5" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 5 at images/brands/brand-05.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (7).jpg" alt="Maur Herbals client brand 6" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 6 at images/brands/brand-06.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (9).jpg" alt="Maur Herbals client brand 8" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 8 at images/brands/brand-08.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (10).jpg" alt="Maur Herbals client brand 9" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 9 at images/brands/brand-09.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (11).jpg" alt="Maur Herbals client brand 10" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 10 at images/brands/brand-10.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (12).jpg" alt="Maur Herbals client brand 11" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 11 at images/brands/brand-11.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (13).jpg" alt="Maur Herbals client brand 12" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 12 at images/brands/brand-12.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (14).jpg" alt="Maur Herbals client brand 13" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 13 at images/brands/brand-13.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (15).jpg" alt="Maur Herbals client brand 14" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 14 at images/brands/brand-14.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (16).jpg" alt="Maur Herbals client brand 15" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 15 at images/brands/brand-15.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (17).jpg" alt="Maur Herbals client brand 16" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 16 at images/brands/brand-16.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (18).jpg" alt="Maur Herbals client brand 17" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 17 at images/brands/brand-17.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (19).jpg" alt="Maur Herbals client brand 18" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 18 at images/brands/brand-18.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (20).jpg" alt="Maur Herbals client brand 19" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 19 at images/brands/brand-19.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (21).jpg" alt="Maur Herbals client brand 20" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 20 at images/brands/brand-20.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (22).jpg" alt="Maur Herbals client brand 21" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 21 at images/brands/brand-21.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (23).jpg" alt="Maur Herbals client brand 22" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 22 at images/brands/brand-22.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (24).jpg" alt="Maur Herbals client brand 23" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 23 at images/brands/brand-23.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (25).jpg" alt="Maur Herbals client brand 24" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 24 at images/brands/brand-24.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (26).jpg" alt="Maur Herbals client brand 25" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 25 at images/brands/brand-25.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (27).jpg" alt="Maur Herbals client brand 26" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 26 at images/brands/brand-26.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (28).jpg" alt="Maur Herbals client brand 27" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 27 at images/brands/brand-27.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (29).jpg" alt="Maur Herbals client brand 28" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 28 at images/brands/brand-28.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (30).jpg" alt="Maur Herbals client brand 29" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 29 at images/brands/brand-29.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (31).jpg" alt="Maur Herbals client brand 30" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 30 at images/brands/brand-30.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (32).jpg" alt="Maur Herbals client brand 31" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 31 at images/brands/brand-31.jpg');"></div>
+            <div class="brand-tile"><img src="./assets/brand- (33).jpg" alt="Maur Herbals client brand 32" loading="lazy" onerror="this.style.visibility='hidden';this.parentElement.style.background='linear-gradient(135deg,#f8f6ef,#ffffff)';this.parentElement.setAttribute('aria-label','Add client brand image 32 at images/brands/brand-32.jpg');"></div>
+        </div>
+        <p class="brands-hint">Scroll horizontally to explore the brands.</p>
+    </div>
+</section>
+
 <!-- ========== CONTACT ========== -->
 <section class="section" id="contact">
     <div class="container">
@@ -1073,6 +1146,13 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:600;line-height:1.15;col
 </footer>
 
 <script>
+
+    /* ---------- Horizontal client brand gallery ---------- */
+    function scrollBrands(direction) {
+        var track = document.getElementById('brandsTrack');
+        if (track) track.scrollBy({ left: direction * Math.max(300, track.clientWidth * 0.75), behavior: 'smooth' });
+    }
+
     /* ---------- Catalog Search ---------- */
     function filterCatalog() {
         var input = document.getElementById('catalogSearchInput').value.toLowerCase();
