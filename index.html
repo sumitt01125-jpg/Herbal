@@ -412,6 +412,28 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:600;line-height:1.15;col
     padding: 14px;
   }
 }
+
+/* Final fix: keep the full phone number inside the navbar on narrow phones.
+   Desktop styles are intentionally untouched. */
+@media (max-width: 560px) {
+  .header .header-inner { box-sizing: border-box; width: calc(100% - 20px); min-width: 0; }
+  .logo-group { flex: 1 1 auto; min-width: 0; }
+  .logo { min-width: 0; font-size: clamp(.72rem, 3.25vw, .94rem); letter-spacing: 0; }
+  .nav-actions { flex: 0 0 auto; min-width: 0; margin-left: auto; }
+  .contact-dropdown { flex: 0 0 auto; min-width: 0; }
+  .btn-call { box-sizing: border-box; width: auto !important; min-width: 0; max-width: 100%; height: 38px; padding: 0 8px; border-radius: 999px !important; gap: 5px; flex-shrink: 0; overflow: visible; }
+  .btn-call .phone-num { display: inline !important; font-size: clamp(.62rem, 2.9vw, .78rem); letter-spacing: 0 !important; white-space: nowrap; }
+  .btn-call svg { width: 16px; height: 16px; flex: 0 0 16px; }
+}
+@media (max-width: 380px) {
+  .header .header-inner { width: calc(100% - 14px); padding: 8px 8px; gap: 8px 5px; }
+  .logo-group { gap: 5px; }
+  .logo-mark { width: 28px; height: 28px; flex-basis: 28px; }
+  .logo { font-size: .69rem; }
+  .btn-call { height: 34px; padding: 0 6px; gap: 4px; }
+  .btn-call .phone-num { font-size: .61rem; }
+}
+
 </style>
 </head>
 <body>
@@ -421,7 +443,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:600;line-height:1.15;col
     <div class="container header-inner">
         <div class="logo-group">
             <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c0-6 0-9 0-12"/><path d="M12 14C8 14 5 11 5 6c4 0 7 3 7 8z"/><path d="M12 11c0-4 3-7 7-7 0 4-3 7-7 7z"/></svg></span>
-            <span class="logo-text"><span class="logo">MAUR HERBALS</span><span class="tagline">We manufacture. Your brand.</span></span>
+            <span class="logo-text"><span class="logo">MAUR HERBALS</span><span class="tagline">We manufacture. You brand.</span></span>
         </div>
 
         <nav class="nav-links">
@@ -612,7 +634,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:600;line-height:1.15;col
         <div class="sampling-card">
             <div>
                 <h3>Try Before You Commit</h3>
-                <p>Order samples of any product in our catalog. Perfect for testing formulation, texture, and packaging before bulk production. Sample charges is fully refundable and will be credited toward your final order.</p>
+                <p>Order samples of any product in our catalog. Perfect for testing formulation, texture, and packaging before bulk production.</p>
             </div>
             <div class="sampling-price">
                 <span class="amount">₹100</span>
@@ -1291,7 +1313,7 @@ h1,h2,h3,h4{font-family:var(--font-heading);font-weight:600;line-height:1.15;col
     <div class="container">
         <div class="section-label">Process</div>
         <h2 class="section-title">How We Work</h2>
-        <p class="section-subtitle">A streamlined 5-step process from enquiry to delivery.</p>
+        <p class="section-subtitle">A streamlined 6-step process from enquiry to delivery.</p>
 
         <div class="timeline">
             <div class="timeline-step">
